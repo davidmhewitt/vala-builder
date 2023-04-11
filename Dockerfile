@@ -11,6 +11,7 @@ RUN apt-get update -y -q && apt-get upgrade -y -q && apt-get update -y -q && \
     apt-get -q install -y \
     curl \
     git \
+    patchelf \
     xz-utils \
     && \
     # Remove apt's lists to make the image smaller.
