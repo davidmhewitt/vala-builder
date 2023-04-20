@@ -19,7 +19,7 @@ PREFIX_DIR=/opt/compiler-explorer/vala-${VERSION}
 mkdir -p "${PREFIX_DIR}"
 
 # "install" libraries and development headers required by the compiler to the prefix
-apt-get update && apt-get download libglib2.0-0 libglib2.0-dev libpcre3 libpcre3-dev
+apt-get update && apt-get download libglib2.0-0 libglib2.0-dev libpcre3 libpcre3-dev libffi6
 find . -type f -name "*.deb" -exec dpkg-deb -x {} "${PREFIX_DIR}" \;
 
 # Strip the /usr prefix from the installed directory structure
